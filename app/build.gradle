@@ -1,0 +1,29 @@
+plugins {
+    id 'application'
+    id 'org.openjfx.javafxplugin' version '0.0.9'
+    id 'idea'
+}
+
+sourceCompatibility = 11
+targetCompatibility = 11
+
+javafx {
+    version = "15.0.1"
+    modules = ['javafx.controls', 'javafx.fxml']
+}
+
+mainClassName = 'eu.paolo.bertin.formlogin.App'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'log4j:log4j:1.2.17'
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.7.1'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine'
+}
+
+test {
+    useJUnitPlatform()
+}
